@@ -1,0 +1,7 @@
+---
+
+- name: Update apt database
+  action: apt update_cache=yes 
+
+- name: Upgrade packages
+  action: apt upgrade=full

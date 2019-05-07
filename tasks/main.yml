@@ -1,0 +1,10 @@
+---
+# main tasks file for update
+
+- name: Update system (Centos)
+  include_tasks: "centos.yml"
+  when: ansible_os_family == "RedHat"
+
+- name: Update system (Debian)
+  include_tasks: "debian.yml"
+  when: ansible_os_family == "Debian"
